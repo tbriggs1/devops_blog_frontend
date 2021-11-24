@@ -1,8 +1,12 @@
 import React from 'react';
+import About from './About';
 
 const Homepage = () => {
     return(
-        <h1>welcome to my blog</h1>
+        <div>
+            <h1>welcome to my blog</h1>
+            <About/>
+        </div>
     )
 }
 
