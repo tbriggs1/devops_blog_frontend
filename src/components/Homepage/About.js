@@ -3,7 +3,7 @@ import React from 'react';
 const About = () =>
 {
     return(
-        <div>
+        <div className="about-main">
             <h3>About me</h3>
             <p>A little bit about me, I'm a DevOps Engineer by trade now. I say now because as of Novemeber 2021 I got my first DevOps role after previously been in 
                 a platform Engineering role, without very much DevOps. Tech can sometimes be daunting, even to the veterans amoung us...so this is the main reason

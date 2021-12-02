@@ -12,13 +12,22 @@
 .home_buttons btn{
     background: red;
     margin-right: 2rem;
-    padding: 0.4rem;
-    border-radius: 25px;
+    padding: 0.5rem;
+    border-radius: 5px;
     padding-right: 0.6rem;
     padding-left: 0.6rem;
     transition: 0.8s;
+    min-width: 500px;
 }
 
 .home_buttons btn:hover{
     background: blue;
 }
+
+.about-main{
+    width: 85vw;
+    margin-bottom: 2rem;
+}
+
+
+
