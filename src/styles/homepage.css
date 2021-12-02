@@ -1,0 +1,24 @@
+.main_home{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info_main{
+    text-align: center;
+}
+
+.home_buttons btn{
+    background: red;
+    margin-right: 2rem;
+    padding: 0.4rem;
+    border-radius: 25px;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    transition: 0.8s;
+}
+
+.home_buttons btn:hover{
+    background: blue;
+}
