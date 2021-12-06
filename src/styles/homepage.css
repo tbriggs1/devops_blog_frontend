@@ -9,18 +9,20 @@
     text-align: center;
 }
 
-.home_buttons btn{
+.home_buttons button{
     background: red;
     margin-right: 2rem;
     padding: 0.5rem;
     border-radius: 5px;
-    padding-right: 0.6rem;
-    padding-left: 0.6rem;
+    padding-right: 0.3rem;
+    padding-left: 0.3rem;
     transition: 0.8s;
-    min-width: 500px;
+    min-width: 200px;
+    border: none;
+    color: white;
 }
 
-.home_buttons btn:hover{
+.home_buttons button:hover{
     background: blue;
 }
 

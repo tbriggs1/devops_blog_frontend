@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import About from './About';
 import '../../styles/homepage.css'
 import Info from './Info';
 
 const Homepage = () => {
+    const testRef = useRef(null);
+
+    const testHandler = () => {
+        console.log(testRef);
+    }
+
     return(
         <div className="main_home">
             <Info />
             <About/>
             <div className="home_buttons">
-                <btn>Check out the Blog</btn>
-                <btn>Contact me</btn>
+                <button ref={testRef} onClick={testHandler}>Check out the Blog</button>
+                <button>Contact me</button>
             </div>
         </div>
     )
