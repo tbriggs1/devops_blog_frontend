@@ -1,12 +1,13 @@
 import Homepage from "./components/Homepage/Homepage.js";
 import '../src/styles/style.css';
-import GetBlogs from "./components/Blog/GetBlogs.js";
+import Blogs from "./components/Blog/Blogs.js";
+
 
 function App() {
 
   return (
     <div className="App">
-      <GetBlogs />
+      <Blogs/>
       <Homepage />
     </div>
   );

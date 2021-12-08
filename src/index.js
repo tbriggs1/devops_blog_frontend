@@ -7,8 +7,7 @@ import allReducers from './reducers/index';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
-const composeEnchaner = window.__REDUX_DEVTOOLS_EXTENSION__ / 
-window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnchaner = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 const store = createStore(allReducers, composeEnchaner(applyMiddleware(thunk)));

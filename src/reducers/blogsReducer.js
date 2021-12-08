@@ -1,5 +1,3 @@
-import axios from "axios"
-
 const initState = {
     devBlogs: [],
     techBlogs: []
@@ -8,7 +6,7 @@ const initState = {
 const blogsReducer = (state=initState, action) => {
     switch(action.type){
         case "FETCH_BLOGS":
-            return {...state}
+            return {...state, devBlogs: action.payload.devBlogs}
         default:
             return {...state}
     }
