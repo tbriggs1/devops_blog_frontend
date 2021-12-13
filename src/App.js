@@ -1,15 +1,19 @@
 import Homepage from "./components/Homepage/Homepage.js";
 import '../src/styles/style.css';
-import Blogs from "./components/Blog/Blogs.js";
+import { Routes, Route } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import Blogs from './components/Blog/Blogs'
 
 // Adding comment for testing
 function App() {
 
   return (
-    <div className="App">
-      <Blogs/>
-      <Homepage />
-    </div>
+    <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/Blog" element={<Blogs />} />
+          </Routes>  
+     </BrowserRouter>
   );
 }
 

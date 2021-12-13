@@ -9,7 +9,7 @@
     text-align: center;
 }
 
-.home_buttons button{
+.home_buttons button, .btn{
     background: red;
     margin-right: 2rem;
     padding: 0.5rem;
@@ -22,7 +22,7 @@
     color: white;
 }
 
-.home_buttons button:hover{
+.home_buttons button:hover, .btn:hover{
     background: blue;
 }
 
