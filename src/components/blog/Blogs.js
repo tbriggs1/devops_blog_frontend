@@ -2,12 +2,12 @@ import React, {useState} from 'react'
 import Get_Blogs from '../api/Get_Blogs';
 
 const Blogs = () => {
-    const [name, setName] = useState();
+    const [name, setName] = useState([]);
 
     return (
         <div>
-            <h1>{name}</h1>
-            <Get_Blogs setName={setName}/>
+            <Get_Blogs setName={setName} name={name}/>
+            {name.map(d => (<h1>{d}</h1>))}
         </div>
     )
 }

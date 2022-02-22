@@ -3,17 +3,19 @@ import axios from 'axios'
 
 const Get_Blogs = (props) => {
 
-    
-
     useEffect(() => {
-        axios.get(`http://51.89.220.72:5000/blogs`)
+        axios.get(`http://192.168.1.100:5000/blogs`)
         .then(res => {
             const persons = res.data;
+            let array = []
             console.log(persons)
-            props.setName("hi");
+            for (const i in persons['blogs']){
+                array.push(persons['blogs'][i]['name'])
+            }
+            props.setName(array)
         })
       
-    })
+    }, []);
 
 
     return(
