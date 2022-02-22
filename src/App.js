@@ -20,16 +20,7 @@ Amplify.configure({
 // Adding comment for testing
 function App() {
   return (
-    <BrowserRouter>
-          <NavBar />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/Blog" element={<Blogs />} />
-            <Route path="/Contact" element={<Contact />} /> 
-            <Route path="/Login" element={<Login />} />
-            <Route path="/Admin" element={<Authentication component={SetBlogs}/>} />
-          </Routes>  
-     </BrowserRouter>
+    <h1>Hello world</h1>
   );
 }
 
