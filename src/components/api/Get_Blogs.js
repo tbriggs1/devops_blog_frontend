@@ -6,13 +6,18 @@ const Get_Blogs = (props) => {
     useEffect(() => {
         axios.get(`http://192.168.1.100:5000/blogs`)
         .then(res => {
-            const persons = res.data;
+            const data = res.data;
             let array = []
-            console.log(persons)
-            for (const i in persons['blogs']){
-                array.push(persons['blogs'][i]['name'])
+            console.log(data)
+            for (const i in data['blogs']){
+                let test = ['/'+data['blogs'][i]['id'], data['blogs'][i]['name'],data['blogs'][i]['id']]
+                array.push(test)
             }
             props.setName(array)
+            for (const i in data['blogs']){
+                array.push()
+            }
+            
         })
       
     }, []);
