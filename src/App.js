@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import { useState } from "react";
 import Blog from "./components/blog/Blog";
 import CreateBlog from "./components/admin/CreateBlog";
+import DeleteBlog from "./components/admin/DeleteBlog";
 
 // Adding comment for testing
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
           <Route path={data} element={<Blog num={num} />} />
           <Route path="/admin/ablog" element={<CreateBlog/>} />
+          <Route path="/admin/dblog" element={<DeleteBlog />} />
         </Routes>
       </Router>
     </div>
