@@ -23,11 +23,18 @@ const DeleteBlog = () => {
       
     }, []);
 
+    const deleteBlog = (blog) => {
+        console.log(blog)
+    }
+
 
     return(
       <div>
           {item.map(d => ( 
-                <h1>{d}</h1>
+                <div>
+                    <h1>{d[1]}</h1>
+                    <button onClick={() => deleteBlog(d[2])}>Delete</button>
+                </div>
             ))}
       </div>
     );
