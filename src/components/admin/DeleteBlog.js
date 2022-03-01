@@ -1,36 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Get_Blogs from '../api/Get_Blogs'
 
 const DeleteBlog = () => {
-    const [item, setItem] = useState();
-
-    useEffect(() => {
-        axios.get(`http://192.168.1.100:5000/blogs`)
-        .then(res => {
-            const data = res.data;
-            let array = []
-            console.log(data)
-            for (const i in data['blogs']){
-                let test = ['/'+data['blogs'][i]['id'], data['blogs'][i]['name'],data['blogs'][i]['id']]
-                array.push(test)
-            }
-            setItem(array)
-            for (const i in data['blogs']){
-                array.push()
-            }
-            
-        })
-      
-    }, []);
+    const [name, setName] = useState([]);
 
     const deleteBlog = (blog) => {
-        console.log(blog)
+        const delete_url = 'http://localhost:5000/blog/'+blog
+        axios.delete(delete_url)
     }
 
 
     return(
       <div>
-          {item.map(d => ( 
+          <Get_Blogs setName={setName}/>
+          {name.map(d => ( 
                 <div>
                     <h1>{d[1]}</h1>
                     <button onClick={() => deleteBlog(d[2])}>Delete</button>
