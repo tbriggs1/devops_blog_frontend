@@ -34,7 +34,7 @@ const CreateBlog = () => {
           
           var config = {
             method: 'post',
-            url: 'http://localhost:5000/blog/'+tempN,
+            url: 'http://51.89.220.72:5000/blog/'+tempN,
             headers: { 
               'Content-Type': 'application/json'
             },

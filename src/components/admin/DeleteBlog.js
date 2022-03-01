@@ -6,7 +6,7 @@ const DeleteBlog = () => {
     const [name, setName] = useState([]);
 
     const deleteBlog = (blog) => {
-        const delete_url = 'http://localhost:5000/blog/'+blog
+        const delete_url = 'http://51.89.220.72:5000/blog/'+blog
         axios.delete(delete_url)
     }
 
