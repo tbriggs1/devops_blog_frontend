@@ -1,9 +1,10 @@
 import React from 'react';
-import awsImg from '../static/images/aws.webp'
+import awsImg from '../static/images/aws.webp';
+import '../static/styles/home.css';
 
 const Homepage = () => {
     return (
-        <main>
+        <main className='home-main'>
             <div>
                 <h1> Welcome to my little space on the web! </h1>
                 <h3>Here you will find blogs on all things DevOps and Cloud!</h3>
@@ -12,7 +13,7 @@ const Homepage = () => {
                 <button>About me!</button>
                 <button>The blog</button>
             </div>
-            <img src={awsImg} height="200px" alt='learning'/>
+            <img src={awsImg} height="200px" width="500px;" alt='learning'/>
             <div>
                 <h2>Current skills</h2>
                 <h3>Add images of crrent skills</h3>
