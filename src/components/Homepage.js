@@ -1,33 +1,27 @@
 import React from 'react';
-import awsImg from '../static/images/aws.webp';
-import '../static/styles/home.css';
+import {motion} from 'framer-motion';
+import {fade} from '../components/Animations.js';
+import {UseScroll} from '../components/Scroll.js';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
+    const [element, controls] = UseScroll();
     return (
-        <main className='home-main'>
-            <div>
+        <motion.div className="main-content" >
+          <section className="about-section">
+              <motion.div className="info" variants={fade} animate={controls} initial="hidden" ref={element}>
                 <h1> Welcome to my little space on the web! </h1>
                 <h3>Here you will find blogs on all things DevOps and Cloud!</h3>
-            </div>
-            <div>
-                <button>About me!</button>
-                <button>The blog</button>
-            </div>
-            <img src={awsImg} height="200px" width="500px;" alt='learning'/>
-            <div>
-                <h2>Current skills</h2>
-                <h3>Add images of crrent skills</h3>
-            </div>
-            <div>
-                <h2>Currently Learning</h2>
-                <h3>Add images of currently learnig</h3>
-            </div>
-            <div>
-                <h2>Interested in</h2>
-                <h3>Add logos of curently interested</h3>
-            </div>
-        </main>
+              </motion.div>
+              <div className='about-buttons'>
+                <Link to={'/about'}><button>Discover more!</button></Link>
+                <Link to={'/blogs'}><button>The Blog</button></Link>
+              </div>
+          </section>
+       </motion.div>
     )
 }
 
 export default Homepage;
+
+

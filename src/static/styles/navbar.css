@@ -1,4 +1,9 @@
-
+:root{
+  --primary-color: #742FF6;
+  --secondary-color: #cfbdec;
+  --dark: #252525;
+  --light: #FFFFFF;
+}
 
 
 * {
@@ -8,7 +13,7 @@
   }
   
   html {
-    background: #2a2a2a;
+    background: var(--light);
   }
 
 .nav-main{
@@ -16,10 +21,9 @@
     justify-items: center;
     align-items: center;
     justify-content: space-evenly;
-    background: #0e3e87;
-    color: white;
+    background: var(--light);
+    color: var(--primary-color);
     padding: 1rem;
-    margin-bottom: 1rem;
 }
 
 
@@ -31,5 +35,9 @@
 
 .nav-item {
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
+}
+
+.nav-item:hover{
+  color: var(--secondary-color);
 }

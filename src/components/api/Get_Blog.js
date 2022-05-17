@@ -3,14 +3,15 @@ import axios from 'axios'
 
 const Get_Blog = ({num, setData}) => {
 
-    const url = `http://172.18.0.1:5000/blog/`+num
+    const url = `http://localhost:5000/blog?id=`+num
     useEffect(() => {
         axios.get(url)
         .then(res => {
+            console.log(res.data)
             const data = res.data;
             let array = [];
             
-            array.push(data['blog']['name'])
+            array.push(data['blog']['title'])
             array.push(data['blog']['description'])
             console.log(array)
             setData(array)
@@ -20,7 +21,7 @@ const Get_Blog = ({num, setData}) => {
 
 
     return(
-      <div>
+      <div classname="hide_blog">
 
       </div>
     );

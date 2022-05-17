@@ -10,7 +10,9 @@ const Get_Blogs = (props) => {
             let array = []
             console.log(data)
             for (const i in data['blogs']){
-                let test = ['/'+data['blogs'][i]['id'], data['blogs'][i]['title'],data['blogs'][i]['id']]
+                let test = [
+                    '/'+data['blogs'][i]['id'], data['blogs'][i]['title'],data['blogs'][i]['id'],
+                data['blogs'][i]['description'],data['blogs'][i]['image'],data['blogs'][i]['date']]
                 array.push(test)
             }
             props.setName(array)
@@ -24,7 +26,7 @@ const Get_Blogs = (props) => {
 
 
     return(
-      <div>
+      <div className='all_blogs'>
 
       </div>
     );
