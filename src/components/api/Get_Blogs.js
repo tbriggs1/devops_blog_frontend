@@ -4,13 +4,13 @@ import axios from 'axios'
 const Get_Blogs = (props) => {
 
     useEffect(() => {
-        axios.get(`http://172.18.0.1:5000/blogs`)
+        axios.get(`http://localhost:5000/blogs`)
         .then(res => {
             const data = res.data;
             let array = []
             console.log(data)
             for (const i in data['blogs']){
-                let test = ['/'+data['blogs'][i]['id'], data['blogs'][i]['name'],data['blogs'][i]['id']]
+                let test = ['/'+data['blogs'][i]['id'], data['blogs'][i]['title'],data['blogs'][i]['id']]
                 array.push(test)
             }
             props.setName(array)
