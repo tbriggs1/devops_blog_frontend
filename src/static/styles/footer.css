@@ -1,0 +1,12 @@
+:root{
+    --primary-color: #742FF6;
+    --secondary-color: #cfbdec;
+    --dark: #252525;
+    --light: #FFFFFF;
+  }  
+
+.footer-main{
+    display:flex;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}

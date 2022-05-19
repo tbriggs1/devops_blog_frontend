@@ -13,6 +13,7 @@ import Blog from "./components/blog/Blog";
 import CreateBlog from "./components/admin/CreateBlog";
 import DeleteBlog from "./components/admin/DeleteBlog";
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
 
 // Adding comment for testing
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/admin/ablog" element={<CreateBlog/>} />
           <Route path="/admin/dblog" element={<DeleteBlog />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

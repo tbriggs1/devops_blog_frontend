@@ -65,6 +65,14 @@
 }
 
 .knowledge-images img {
-  width: 300px;
-  height:250px;
+  width: 170px;
+  height:150px;
+  margin-bottom: 20px;
+}
+
+.current-work-main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
