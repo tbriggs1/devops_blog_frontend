@@ -26,7 +26,7 @@ const Desiredwork = () => {
         },
         {
           img: angular,
-          title: 'Packer',
+          title: 'Angular',
         },
         {
           img: c,
@@ -39,9 +39,9 @@ const Desiredwork = () => {
       ];
 
     return (
-        <main className='current-work-main'>
+        <main className='desired-work-main'>
             <h1>Desired Skills</h1>
-            <ImageList sx={{ width: 1000, height: 450 }} cols={6} rowHeight={164} className='ui-list'>
+            <ImageList sx={{ width: 1000, height: 300 }} cols={6} rowHeight={164} className='ui-list'>
             {itemData.map((item) => (
                 <ImageListItem key={item.img}>
                 <img

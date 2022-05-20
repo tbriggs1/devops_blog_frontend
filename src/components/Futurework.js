@@ -19,9 +19,9 @@ const Futurework = () => {
       ];
 
     return (
-        <main className='current-work-main'>
+        <main className='future-work-main'>
             <h1>Currently Learning</h1>
-            <ImageList sx={{ width: 450, height: 450 }} cols={2} rowHeight={164} className='ui-list'>
+            <ImageList sx={{ width: 450, height: 350 }} cols={2} rowHeight={164} className='ui-list'>
             {itemData.map((item) => (
                 <ImageListItem key={item.img}>
                 <img

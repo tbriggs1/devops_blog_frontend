@@ -70,9 +70,14 @@
   margin-bottom: 20px;
 }
 
-.current-work-main{
+.current-work-main, .desired-work-main, .future-work-main {
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.current-work-main h1, .desired-work-main h1, .future-work-main h1 {
+  margin-top: 15px;
+  margin-bottom: 50px;
 }
