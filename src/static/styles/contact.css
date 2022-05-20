@@ -1,0 +1,33 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.contact-left {
+    grid-column-start: 4;
+    grid-column-end:  4;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-right {
+    grid-column-start: 6;
+    grid-column-end:  10;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.phone, .email, .linkedin {
+    display: flex;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}

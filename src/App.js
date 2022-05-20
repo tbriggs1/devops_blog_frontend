@@ -14,6 +14,7 @@ import CreateBlog from "./components/admin/CreateBlog";
 import DeleteBlog from "./components/admin/DeleteBlog";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import './static/styles/about.css'
 
 // Adding comment for testing
 function App() {

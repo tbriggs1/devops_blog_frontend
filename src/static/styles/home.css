@@ -1,8 +1,8 @@
 :root{
-  --primary-color: #742FF6;
-  --secondary-color: #cfbdec;
-  --dark: #252525;
-  --light: #FFFFFF;
+    --primary-color: #002500;
+    --secondary-color: #929982;
+    --dark: #252525;
+    --light: #FFFFFF
 }
 
 .all_blogs{
