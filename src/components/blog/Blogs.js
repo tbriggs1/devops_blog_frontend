@@ -14,7 +14,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import ShareLink from 'react-linkedin-share-link'
 
 import '../../static/styles/blog.css';
 
