@@ -1,54 +1,69 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import Get_Blogs from '../api/Get_Blogs';
-import { Col, Card, Row } from 'react-bootstrap';
+
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
+import { experimentalStyled as styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+
+import ShareLink from 'react-linkedin-share-link'
+
+import '../../static/styles/blog.css';
+
+const Item = styled(Paper)(({ theme }) => ({
+    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    ...theme.typography.body2,
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  }));
 
 const Blogs = ({setId}) => {
     const [name, setName] = useState([]);
-    
 
-    // Change this to click me instead of d[1] which is the blog title
-    return (
-        <Row xs={1} md={3} className="g-4">
-            <Get_Blogs setName={setName} setId={setId}/>
-            {name.map(d => (
-                <Col>
-                    <Card>
-                        <Card.Img className='bs-image' variant="top" src={d[4]} />
-                        <Card.Body>
-                        <Link onClick={() => setId([d[0], d[2]])} to={d[0]}>
-                        
-                        <Card.Title>{d[1]}</Card.Title>
-                        </Link>
-                        <Card.Text>{d[3]}</Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                        <small className="text-muted">{d[5]}</small>
-                        </Card.Footer>
+  return (
+      <main className='blog-main'>
+        <Box  className='box-blog' sx={{ flexGrow: 1 }}>
+        <Grid container spacing={{ xs: 2, md: 1 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+                <Get_Blogs setName={setName} setId={setId}/>
+                {name.map(d => (
+                <Grid item xs={4} sm={6} md={3} key={d[0]}>
+                        <Card sx={{ maxWidth: 345 }} className='blog-card'>
+                        <CardMedia
+                        component="img"
+                        height="140"
+                        image={d[4]}
+                        alt="blog image"
+                        />
+                        <CardContent>
+                        <Typography gutterBottom variant="h5" component="div" className='blog-title'>
+                            {d[1]}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" className='blog-description'>
+                            {d[3]}
+                        </Typography>
+                        </CardContent>
+                        <CardActions>
+                        <Link onClick={() => setId([d[0], d[2]])} to={d[0]}><Button size="small">Read More</Button></Link>
+                        </CardActions>
                     </Card>
-                </Col>
-            ))}
-       
-       </Row>
-
-
-// {/* <Row xs={1} md={2} className="g-4">
-//   {Array.from({ length: 4 }).map((_, idx) => (
-//     <Col>
-//       <Card>
-//         <Card.Img variant="top" src="holder.js/100px160" />
-//         <Card.Body>
-//           <Card.Title>Card title</Card.Title>
-//           <Card.Text>
-//             This is a longer card with supporting text below as a natural
-//             lead-in to additional content. This content is a little bit longer.
-//           </Card.Text>
-//         </Card.Body>
-//       </Card>
-//     </Col>
-//   ))}
-// </Row> */}
-    )
+                </Grid>
+                ))}
+            </Grid>
+        </Box>
+    </main>
+  );
 }
 
 export default Blogs;
+
+
+{/*  */}

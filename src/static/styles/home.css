@@ -44,8 +44,8 @@
 
 .about-section button:hover{
   background-color: var(--secondary-color);
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  color: var(--light);
 }
 
 .about-section .info {

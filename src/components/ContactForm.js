@@ -15,7 +15,7 @@ const ContactForm = () => {
         <label htmlFor="message">Message</label>
         <textarea className="form-control" rows="5"></textarea>
     </div>
-    <button type="submit" className="btn btn-primary">Submit</button>
+    <button type="submit" className="btn btn-primary contact-btn">Submit</button>
 </form>
   )
 };
