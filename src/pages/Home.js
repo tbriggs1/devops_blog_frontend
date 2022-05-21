@@ -6,14 +6,15 @@ import Currentwork from '../components/Currentwork.js';
 import Futurework from '../components/Futurework.js';
 import Desiredwork from '../components/Desiredwork.js';
 import '../static/styles/home.css';
+import About from '../components/About.js';
+import Contact from '../components/Contact.js';
 
 const Home = () => {
     return(
         <motion.div className="page-content" exit="exit" variants={aboutPageAnimation} initial='hidden' animate='show'>
             <Homepage />
-            <Currentwork />
-            <Futurework />
-            <Desiredwork />
+            <About />
+            <Contact />
         </motion.div>
     )
 }

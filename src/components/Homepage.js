@@ -14,8 +14,8 @@ const Homepage = () => {
                 <h3>Here you will find blogs on all things DevOps and Cloud!</h3>
               </motion.div>
               <div className='about-buttons'>
-                <Link to={'/about'}><button>About Me</button></Link>
                 <Link to={'/blogs'}><button>The Blog</button></Link>
+                <Link to={'/contact'}><button>Contact Me</button></Link>
               </div>
           </section>
        </motion.div>
