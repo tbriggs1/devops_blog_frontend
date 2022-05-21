@@ -16,7 +16,7 @@
 .about-section {
     min-height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
-      url("../images/cloud.jpg");
+      url("../images/me.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,8 +65,7 @@
 }
 
 .knowledge-images img {
-  width: 170px;
-  height:150px;
+  max-width: 70px;
   margin-bottom: 20px;
 }
 

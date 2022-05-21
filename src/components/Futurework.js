@@ -3,14 +3,14 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
 import server from '../static/images/serverless.png';
-import packer from '../static/images/packer.png';
+import typescript from '../static/images/typescript.svg';
 
 
 const Futurework = () => {
     const itemData = [
         {
-          img: packer,
-          title: 'Packer',
+          img: typescript,
+          title: 'Typescript',
         },
         {
           img: server,

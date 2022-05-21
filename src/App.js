@@ -27,7 +27,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
           <Route path="/blogs" element={
             <Blogs setId={setId} />}
           />

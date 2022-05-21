@@ -8,13 +8,18 @@ import '../../static/styles/blog.css';
 const Blog = ({num}) => {
     
     const [data, setData] = useState([]);
+    const [title, setTitle] = useState();
+    const [description, setDescription] = useState();
     
+    function createMarkup() {
+        return {__html: data[1]}
+    }
+
     return (
         <div className='blog'>
-            <Get_Blog num={num} setData={setData}/>
-            <h1>{data[0]}</h1>
-            <p>{data[1]}</p>         
-            <p>{data[10]}</p>   
+            <Get_Blog num={num} setData={setData} setTitle={setTitle} setDescription={setDescription}/>
+            <h1>{title}</h1>        
+            <div dangerouslySetInnerHTML={createMarkup()} />
         </div>
     )
 }

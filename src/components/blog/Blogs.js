@@ -14,7 +14,6 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 
-import ShareLink from 'react-linkedin-share-link'
 
 import '../../static/styles/blog.css';
 
@@ -28,6 +27,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Blogs = ({setId}) => {
     const [name, setName] = useState([]);
+
+    function createMarkup(data) {
+      return {__html: data}
+  }
 
   return (
       <main className='blog-main'>
@@ -48,7 +51,7 @@ const Blogs = ({setId}) => {
                             {d[1]}
                         </Typography>
                         <Typography variant="body2" color="text.secondary" className='blog-description'>
-                            {d[3]}
+                            <div className='change-title' dangerouslySetInnerHTML={createMarkup(d[3])}></div>
                         </Typography>
                         </CardContent>
                         <CardActions>

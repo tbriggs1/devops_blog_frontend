@@ -16,6 +16,7 @@ const Get_Blogs = (props) => {
                 array.push(test)
             }
             props.setName(array)
+            console.log(data['blogs'][1])
             for (const i in data['blogs']){
                 array.push()
             }

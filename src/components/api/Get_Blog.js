@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const Get_Blog = ({num, setData}) => {
+const Get_Blog = ({num, setData, setTitle, setDescription}) => {
 
     const url = `http://51.89.220.72:5002/blog?id=`+num
     useEffect(() => {
         axios.get(url)
         .then(res => {
-            console.log(res.data)
             const data = res.data;
             let array = [];
             
             array.push(data['blog']['title'])
             array.push(data['blog']['description'])
-            console.log(array)
+            setTitle(data['blog']['title'])
+            let parser = new DOMParser();
+            let conValue = parser.parseFromString(data['blog']['description'], 'text/html');
+            setDescription(conValue['firstElementChild']['innerHTML']);
             setData(array)
         })
       
