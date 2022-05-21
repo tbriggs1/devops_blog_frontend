@@ -28,6 +28,10 @@ const Item = styled(Paper)(({ theme }) => ({
 const Blogs = ({setId}) => {
     const [name, setName] = useState([]);
 
+    function createMarkup(data) {
+      return {__html: data}
+  }
+
   return (
       <main className='blog-main'>
         <Box  className='box-blog' sx={{ flexGrow: 1 }}>
@@ -47,7 +51,7 @@ const Blogs = ({setId}) => {
                             {d[1]}
                         </Typography>
                         <Typography variant="body2" color="text.secondary" className='blog-description'>
-                            {d[3]}
+                            <div className='change-title' dangerouslySetInnerHTML={createMarkup(d[3])}></div>
                         </Typography>
                         </CardContent>
                         <CardActions>
