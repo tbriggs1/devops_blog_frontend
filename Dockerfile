@@ -1,13 +1,18 @@
-FROM node:14.9
+FROM node:14.9 AS builder
 
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
+WORKDIR /app
 
 COPY . .
 
-EXPOSE 3000
+RUN npm install && npm run build
 
-CMD ["npm", "start"]
+
+FROM nginx
+
+WORKDIR /usr/share/nginx/html
+
+RUN rm -rf ./*
+
+COPY --from=builder /app/build .
+
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
