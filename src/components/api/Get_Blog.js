@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Get_Blog = ({num, setData, setTitle, setDescription}) => {
 
-    const url = `http://51.89.220.72:5002/blog?id=`+num
+    const url = `https://51.89.220.72:5002/blog?id=`+num
     useEffect(() => {
         axios.get(url)
         .then(res => {
