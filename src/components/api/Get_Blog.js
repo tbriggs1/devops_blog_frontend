@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const Get_Blog = ({num, setData, setTitle, setDescription}) => {
 
-    const url = `172.30.0.1:5002/blog?id=`+num
+    const url = `localhost:5002/blog?id=`+num
     useEffect(() => {
         axios.get(url)
         .then(res => {
