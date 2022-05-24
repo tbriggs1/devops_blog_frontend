@@ -4,7 +4,7 @@ import axios from 'axios'
 const Get_Blogs = (props) => {
 
     useEffect(() => {
-        axios.get(`https://51.89.220.72:5002/blogs`)
+        axios.get(`172.30.0.1:5002/blogs`)
         .then(res => {
             const data = res.data;
             let array = []
