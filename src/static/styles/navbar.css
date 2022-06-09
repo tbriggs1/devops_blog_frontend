@@ -16,18 +16,6 @@
     background: var(--light);
   }
 
-.nav-main{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-evenly;
-    background: var(--light);
-    color: var(--primary-color);
-    padding: 1rem;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
 
 .nav{
     display:flex;

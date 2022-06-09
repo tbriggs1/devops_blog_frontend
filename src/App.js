@@ -1,5 +1,5 @@
 import Homepage from "./components/Homepage";
-import Navbar from "./components/Navbar";
+import Navigationbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +15,7 @@ import DeleteBlog from "./components/admin/DeleteBlog";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import './static/styles/about.css'
+import './static/styles/mobile.css'
 
 // Adding comment for testing
 function App() {
@@ -24,7 +25,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar />
+        <Navigationbar />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/blogs" element={
